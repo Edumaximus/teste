@@ -51,7 +51,7 @@ app.MapPut("api/carros/{id}", ([FromRoute] int id, [FromBody] Carro carro, [From
 });
 
 //DELETE: remove um carro pelo id
-app.MapDelete("api/carros{id}", ([FromRoute] int id, [FromServices] AppDataContext ctx)=>{
+app.MapDelete("api/carros/{id}", ([FromRoute] int id, [FromServices] AppDataContext ctx)=>{
     Carro? carro = ctx.Carros.Find(id);
     if(carro==null){
         return Results.NotFound();
