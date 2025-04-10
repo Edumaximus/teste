@@ -8,9 +8,23 @@ GET http://localhost:5122/api/carros
 POST http://localhost:5122/api/carros
 Content-Type: application/json
 
+{
+    "name": "Hundai HB20s",
+    "modelo": {
+        "id": 1
+    }
+}
+
 ### Atualiza nomes de carros
-PUT http://localhost:5122/api/carros
+PUT http://localhost:5122/api/carros/1
 Content-Type: application/json
+
+{
+    "name": "Hyundai HB20s",
+    "modelo": {
+        "id": 1
+    }
+}
 
 ### Remove carros pelo id
 DELETE http://localhost:5122/api/carros
